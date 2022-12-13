@@ -37,12 +37,23 @@ const DrawerExample = () => {
           _hover={{
             backgroundColor: 'darkPrimary'
           }}
+          _active={{
+            backgroundColor: 'darkPrimary'
+          }}
           color="white"
           textAlign="center"
           icon={<FaBars />}
         />
 
-        <Text color="secondary" fontSize="14px" fontWeight="bold">
+        <Text
+          display={{
+            base: 'none',
+            lg: 'block'
+          }}
+          color="secondary"
+          fontSize="14px"
+          fontWeight="bold"
+        >
           MENU
         </Text>
       </Box>

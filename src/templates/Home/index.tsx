@@ -1,8 +1,9 @@
+import HeroSection from 'components/HeroSection'
 import Base from 'templates/Base'
 
 const Home = () => (
   <Base>
-    <p>Teste</p>
+    <HeroSection />
   </Base>
 )
 

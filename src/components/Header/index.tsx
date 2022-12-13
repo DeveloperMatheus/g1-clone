@@ -41,6 +41,7 @@ const Header = () => {
         justifyContent="space-between"
       >
         <Box
+          display="flex"
           width={{
             base: 'auto',
             lg: '200px'
@@ -62,16 +63,17 @@ const Header = () => {
           </NextLink>
         </Box>
 
-        <Box>
+        <Box
+          display={{
+            base: 'none',
+            lg: 'block'
+          }}
+        >
           <InputGroup>
             <InputLeftElement pointerEvents="none">
               <Icon as={FaSearch} color="gray" />
             </InputLeftElement>
             <Input
-              display={{
-                base: 'none',
-                lg: 'block'
-              }}
               width="200px"
               variant="filled"
               placeholder="Busca"
@@ -91,6 +93,9 @@ const Header = () => {
           width={{
             base: 'auto',
             lg: '200px'
+          }}
+          _active={{
+            backgroundColor: 'darkPrimary'
           }}
           backgroundColor="transparent"
           color="white"
