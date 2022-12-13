@@ -4,7 +4,12 @@ import cardNewsList from './mocks'
 
 const NewsSection = () => (
   <Container as="section" maxWidth="1440px">
-    <Box width="70%">
+    <Box
+      width={{
+        base: '100%',
+        lg: '70%'
+      }}
+    >
       {cardNewsList.map((item, index) => (
         <CardNews {...item} key={index} />
       ))}

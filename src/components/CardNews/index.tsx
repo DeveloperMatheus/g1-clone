@@ -18,19 +18,51 @@ const CardNews = ({
 }: CardNewsType) => (
   <Box
     display="flex"
-    flexDirection="row"
+    flexDirection={{
+      base: 'column',
+      lg: 'row'
+    }}
     alignItems="start"
     justifyContent="center"
-    py="30px"
+    py={{
+      base: '15px',
+      lg: '30px'
+    }}
     borderBottom="1px solid #e1e1e1"
   >
-    <Box width="400px" height="220px" position="relative" mr="15px">
+    {/* Image Desktop */}
+    <Box
+      display={{
+        base: 'none',
+        lg: 'block'
+      }}
+      width="400px"
+      height="220px"
+      position="relative"
+      mr="15px"
+    >
       <Image fill alt="Imagem da notícia" src={imageSrc} />
     </Box>
+
     <Box>
       <Text color="primary" fontSize="24px" lineHeight="35px" fontWeight="bold">
         {title}
       </Text>
+
+      {/* Image Mobile */}
+      <Box
+        display={{
+          base: 'block',
+          lg: 'none'
+        }}
+        width="100%"
+        height="220px"
+        position="relative"
+        mt="10px"
+      >
+        <Image fill alt="Imagem da notícia" src={imageSrc} />
+      </Box>
+
       <UnorderedList mt="10px">
         {subtitleList.map((item, index) => (
           <ListItem
