@@ -1,4 +1,13 @@
-import { Box, Flex, Container, Input, IconButton } from '@chakra-ui/react'
+import {
+  Box,
+  Flex,
+  Container,
+  Input,
+  IconButton,
+  InputGroup,
+  InputLeftElement,
+  Icon
+} from '@chakra-ui/react'
 import Drawer from 'components/Drawer'
 import Image from 'next/image'
 import NextLink from 'next/link'
@@ -53,22 +62,26 @@ const Header = () => {
           </NextLink>
         </Box>
 
-        <Input
-          display={{
-            base: 'none',
-            lg: 'block'
-          }}
-          width="200px"
-          variant="filled"
-          placeholder="Busca"
-          backgroundColor="white"
-          // _hover={{
-          //   backgroundColor: 'darkPrimary'
-          // }}
-          _focus={{
-            backgroundColor: 'white'
-          }}
-        />
+        <Box>
+          <InputGroup>
+            <InputLeftElement pointerEvents="none">
+              <Icon as={FaSearch} color="gray" />
+            </InputLeftElement>
+            <Input
+              display={{
+                base: 'none',
+                lg: 'block'
+              }}
+              width="200px"
+              variant="filled"
+              placeholder="Busca"
+              backgroundColor="white"
+              _focus={{
+                backgroundColor: 'white'
+              }}
+            />
+          </InputGroup>
+        </Box>
 
         <IconButton
           display={{

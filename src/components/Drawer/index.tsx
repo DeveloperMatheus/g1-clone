@@ -9,7 +9,8 @@ import {
   Box,
   Button,
   IconButton,
-  Icon
+  Icon,
+  Text
 } from '@chakra-ui/react'
 
 import Link from 'next/link'
@@ -23,17 +24,28 @@ const DrawerExample = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
-      <IconButton
-        onClick={onOpen}
-        aria-label="Open Drawer"
-        backgroundColor="primary"
-        _hover={{
-          backgroundColor: 'darkPrimary'
-        }}
-        color="white"
-        textAlign="center"
-        icon={<FaBars />}
-      />
+      <Box
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <IconButton
+          onClick={onOpen}
+          aria-label="Open Drawer"
+          backgroundColor="primary"
+          _hover={{
+            backgroundColor: 'darkPrimary'
+          }}
+          color="white"
+          textAlign="center"
+          icon={<FaBars />}
+        />
+
+        <Text color="secondary" fontSize="14px" fontWeight="bold">
+          MENU
+        </Text>
+      </Box>
 
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
