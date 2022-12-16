@@ -24,9 +24,9 @@ const CardNews = ({
     }}
     alignItems="start"
     justifyContent="center"
-    py={{
+    mb={{
       base: '15px',
-      lg: '30px'
+      lg: '40px'
     }}
     borderBottom="1px solid #e1e1e1"
   >
